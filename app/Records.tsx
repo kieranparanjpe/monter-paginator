@@ -5,7 +5,7 @@ import Record from "@/app/record";
 
 export default function Records()
 {
-    let records : RecordDataType[] =
+    const records : RecordDataType[] =
         [new RecordDataType("2024/04/04", "16:03 PM", "record1.csv"),
             new RecordDataType("2024/04/05", "18:04 PM", "record2.csv"),
             new RecordDataType("2024/04/03", "13:05 PM", "record3.csv"),
@@ -28,7 +28,7 @@ export default function Records()
         let end = start + rowsPerPage;
         setRecordsToShow(records.slice(start, end));
 
-    }, [currentPage, records, rowsPerPage]);
+    }, [currentPage, rowsPerPage]);
 
     return(
         <div>
